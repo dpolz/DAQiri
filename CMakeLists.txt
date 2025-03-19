@@ -96,6 +96,11 @@ if(NOT DEFINED PORT_DIR)
     message(STATUS "PORT_DIR = ${PORT_DIR}")
 endif()
 
+if(NOT DEFINED DAQIRILIB_DIR)
+    set(DAQIRILIB_DIR ${CMAKE_SOURCE_DIR}/libraries/DAQiriLib)
+    message(STATUS "DAQIRILIB_DIR= ${DAQIRILIB_DIR}")
+endif()
+
 # Turn off mbedtls test mode 
 set(ENABLE_PROGRAMS OFF CACHE BOOL "Build mbedtls programs")
 set(ENABLE_TESTING OFF CACHE BOOL "Build mbedtls testing")
@@ -110,6 +115,7 @@ add_subdirectory(${CMAKE_SOURCE_DIR}/libraries)
 #add_subdirectory(${FREERTOS_DIR})
 add_subdirectory(${MBEDTLS_DIR})
 add_subdirectory(${PORT_DIR})
+add_subdirectory(${DAQIRILIB_DIR})
 
 # Set compile options
 add_compile_options(

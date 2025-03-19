@@ -94,17 +94,6 @@ target_include_directories(DNS_FILES PUBLIC
         ${WIZNET_DIR}/Internet/DNS
         )
 
-# DAQiri
-add_library(DAQIRI_FILES STATIC)
-
-target_sources(DAQIRI_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/libraries/DAQiriEthernet/DAQiriEthernet.c
-        )
-
-target_include_directories(DAQIRI_FILES PUBLIC
-        ${CMAKE_SOURCE_DIR}/libraries/DAQiriEthernet
-        )
-
 # FTP Client
 add_library(FTPCLIENT_FILES STATIC)
 
