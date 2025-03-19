@@ -17,7 +17,8 @@ target_link_libraries(${TARGET_NAME} PRIVATE
         IOLIBRARY_FILES
         DHCP_FILES
         DNS_FILES
-        TIMER_FILES        
+        TIMER_FILES
+        DAQIRI_FILES
         )
 
 pico_enable_stdio_usb(${TARGET_NAME} 1)

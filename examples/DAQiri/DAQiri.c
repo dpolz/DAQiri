@@ -27,6 +27,8 @@
 
 #include "timer.h"
 
+#include "DAQiriEthernet.h"
+
 /**
  * ----------------------------------------------------------------------------------------------------
  * Macros
@@ -133,6 +135,8 @@ int main()
     xTaskCreate(dns_task, "DNS_Task", DNS_TASK_STACK_SIZE, NULL, DNS_TASK_PRIORITY, NULL);
 
     dns_sem = xSemaphoreCreateCounting((unsigned portBASE_TYPE)0x7fffffff, (unsigned portBASE_TYPE)0);
+
+    volatile int x = gibzahl();
 
     vTaskStartScheduler();
 
